@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dodge And Roll</title>
+  <meta name="description"
+    content="A fun 2D browser game where you control a ball to dodge falling objects. Use A and D keys to move!">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="game-wrapper">
+    <canvas id="gameCanvas"></canvas>
+    <div id="ui-overlay">
+      <div id="score-display">SCORE: <span id="score">0</span></div>
+      <div id="high-score-display">BEST: <span id="high-score">0</span></div>
+    </div>
+    <div id="start-screen" class="screen">
+      <h1>🟡 Dodge And Roll</h1>
+      <p class="subtitle">Dodge the falling objects as long as you can!</p>
+      <div class="controls-hint">
+        <span class="key">A</span> Move Left &nbsp;&nbsp;&nbsp; <span class="key">D</span> Move Right
+      </div>
+      <div class="color-picker-wrapper">
+        <span class="picker-label">BALL COLOR</span>
+        <div class="color-picker"></div>
+      </div>
+      <button id="start-btn" class="glow-btn">START GAME</button>
+    </div>
+    <div id="game-over-screen" class="screen hidden">
+      <h1>💥 Game Over</h1>
+      <p class="final-score">Score: <span id="final-score">0</span></p>
+      <p class="final-high">Best: <span id="final-high-score">0</span></p>
+      <button id="restart-btn" class="glow-btn">PLAY AGAIN</button>
+      <div class="difficulty-selector">
+        <label for="difficulty-select">DIFFICULTY</label>
+        <select id="difficulty-select">
+          <option value="1">Easy</option>
+          <option value="2" selected>Medium</option>
+          <option value="3">Hard</option>
+        </select>
+      </div>
+      <div class="color-picker-wrapper">
+        <span class="picker-label">BALL COLOR</span>
+        <div class="color-picker"></div>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+
+</html>
